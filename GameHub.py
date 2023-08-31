@@ -9,6 +9,7 @@ def welcome():
     print()
 
 def choose_game():
+    welcome()
     print("(1) Hangman (2) Guess the number (3) Guess the word")
 
     game_number = int(input("Choose a game: "))
