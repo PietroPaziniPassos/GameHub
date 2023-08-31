@@ -89,7 +89,18 @@ def verify_correct(guess, secret_word):
         return True        
 
 def print_winner_message(secret_word):
-    pass
+    print("Congratulation, you won!  ")
+    print("       ___________      ")
+    print("      '._==_==_=_.'     ")
+    print("      .-\\:      /-.    ")
+    print("     | (|:.     |) |    ")
+    print("      '-|:.     |-'     ")
+    print("        \\::.    /      ")
+    print("         '::. .'        ")
+    print("           ) (          ")
+    print("         _.' '._        ")
+    print("        '-------'       ")
+    print("The word was ", secret_word)
 
 if(__name__ == "__main__"):
     play()
