@@ -28,6 +28,7 @@ def welcome():
     print("*********************************")
     print("Welcome to Guess the number game!")
     print("*********************************")
+    print()
 
 def load_secret_number():
     secret_number = random.randrange(1,101)
