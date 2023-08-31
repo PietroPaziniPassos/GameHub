@@ -40,6 +40,8 @@ def play():
             print("You got correct the follow letters: ")
             print(verify_letters(guess, secret_word))
         print()
+    if(attempts < 0):
+        print_looser_message(secret_word)
     
 def welcome():
     print("*******************************")
@@ -101,6 +103,26 @@ def print_winner_message(secret_word):
     print("         _.' '._        ")
     print("        '-------'       ")
     print("The word was ", secret_word)
+
+def print_looser_message(secret_word):
+    print("You lost!")
+    print("The word was ", secret_word)
+    print("    _______________        ")
+    print("   /               \       ")
+    print("  /                 \      ")
+    print("//                   \/\   ")
+    print("\|   XXXX     XXXX   | /   ")
+    print(" |   XXXX     XXXX   |/    ")
+    print(" |   XXX       XXX   |     ")
+    print(" |                   |     ")
+    print(" \__      XXX      __/     ")
+    print("   |\     XXX     /|       ")
+    print("   | |           | |       ")
+    print("   | I I I I I I I |       ")
+    print("   |  I I I I I I  |       ")
+    print("   \_             _/       ")
+    print("     \_         _/         ")
+    print("       \_______/           ")
 
 if(__name__ == "__main__"):
     play()
