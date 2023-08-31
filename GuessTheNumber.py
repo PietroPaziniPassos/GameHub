@@ -61,4 +61,21 @@ def print_winner_message(secret_number):
     print("The number was ", secret_number)
 
 def print_looser_message(secret_number):
-    pass
+    print("You lost!")
+    print("    _______________        ")
+    print("   /               \       ")
+    print("  /                 \      ")
+    print("//                   \/\   ")
+    print("\|   XXXX     XXXX   | /   ")
+    print(" |   XXXX     XXXX   |/    ")
+    print(" |   XXX       XXX   |     ")
+    print(" |                   |     ")
+    print(" \__      XXX      __/     ")
+    print("   |\     XXX     /|       ")
+    print("   | |           | |       ")
+    print("   | I I I I I I I |       ")
+    print("   |  I I I I I I  |       ")
+    print("   \_             _/       ")
+    print("     \_         _/         ")
+    print("       \_______/           ")
+    print("The number was ", secret_number)
