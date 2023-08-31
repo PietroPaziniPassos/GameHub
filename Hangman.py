@@ -17,3 +17,16 @@ def load_secret_word():
     names_list = []
     animals_list = []
     all_words_list = []
+    for line in fruits_file:
+        line = line.strip()
+        fruits_list.append(line)
+        all_words_list.append(line)
+    for line in names_file:
+        line = line.strip()
+        names_list.append(line)
+        all_words_list.append(line)
+    for line in animals_file:
+        line = line.strip()
+        animals_list.append(line)
+        all_words_list.append(line)
+        
