@@ -13,33 +13,36 @@ def play():
     guesses_list = []
     while(attempts >= 0):
         guess = input("Guess the word: ").upper()
-        print()
-        if(verify_correct(guess, secret_word)):
+        if(guess.isalpha()):
+            print()
+            if(verify_correct(guess, secret_word)):
+                word_list = []
+                for letter in guess:
+                    word_list.append(letter)
+                guesses_list.append(word_list)
+                for word in guesses_list:
+                    print(word)
+                for i in range(0, attempts):
+                    print(defaut_list)
+                print_winner_message(secret_word)
+                break
+            attempts -= 1
             word_list = []
             for letter in guess:
                 word_list.append(letter)
             guesses_list.append(word_list)
             for word in guesses_list:
                 print(word)
+            if(attempts >= 0):
+                print(verify_next(guess, secret_word))
             for i in range(0, attempts):
                 print(defaut_list)
-            print_winner_message(secret_word)
-            break
-        attempts -= 1
-        word_list = []
-        for letter in guess:
-            word_list.append(letter)
-        guesses_list.append(word_list)
-        for word in guesses_list:
-            print(word)
-        if(attempts >= 0):
-            print(verify_next(guess, secret_word))
-        for i in range(0, attempts):
-            print(defaut_list)
-        if(attempts >= 0):
-            print("You got correct the follow letters: ")
-            print(verify_letters(guess, secret_word))
-        print()
+            if(attempts >= 0):
+                print("You got correct the follow letters: ")
+                print(verify_letters(guess, secret_word))
+            print()
+        else:
+            print("You need to guess a word, only alphanumeric characters are allowed!")
     if(attempts < 0):
         print_looser_message(secret_word)
     
