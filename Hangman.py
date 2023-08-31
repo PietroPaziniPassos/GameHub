@@ -121,8 +121,19 @@ def draw_hangman(wrong_guesses, wrong_letters):
     print("Wrong letters: ", wrong_letters)
     print()
 
-def print_win_message(secret_word):
-    pass
+def print_winner_message(secret_word):
+    print("Congratulation, you won!  ")
+    print("       ___________      ")
+    print("      '._==_==_=_.'     ")
+    print("      .-\\:      /-.    ")
+    print("     | (|:.     |) |    ")
+    print("      '-|:.     |-'     ")
+    print("        \\::.    /      ")
+    print("         '::. .'        ")
+    print("           ) (          ")
+    print("         _.' '._        ")
+    print("        '-------'       ")
+    print("The word was ", secret_word)
 
 def print_looser_message(secret_word):
     pass
