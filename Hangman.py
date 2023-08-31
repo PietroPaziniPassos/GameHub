@@ -10,13 +10,16 @@ def play():
 
     while(wrong_guesses <= 7 and "_" in right_letters):
         guess = input("Guess a letter").strip().upper()
-        if (guess in secret_word):
-            right_guess(guess, right_letters, secret_word)
+        if(guess.isalpha()):
+            if (guess in secret_word):
+                right_guess(guess, right_letters, secret_word)
+            else:
+                wrong_letters.append(guess)
+                wrong_guesses += 1
+                draw_hangman(wrong_guesses, wrong_letters)
+            print(right_letters)
         else:
-            wrong_letters.append(guess)
-            wrong_guesses += 1
-            draw_hangman(wrong_guesses, wrong_letters)
-        print(right_letters)
+            print("You need to guess a letter!")
     if ("_" not in right_letters):
         print_winner_message(secret_word)
     else:
