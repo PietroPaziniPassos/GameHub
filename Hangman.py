@@ -29,4 +29,6 @@ def load_secret_word():
         line = line.strip()
         animals_list.append(line)
         all_words_list.append(line)
-        
+    fruits_file.close()
+    names_file.close()
+    animals_file.close()
