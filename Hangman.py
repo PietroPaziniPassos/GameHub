@@ -29,9 +29,9 @@ def welcome():
     print()
 
 def load_secret_word():
-    fruits_file = open(r"c:\Users\ppppa\OneDrive\Documents\VSCodes\Python\Python_GameHub\Words\Fruits.txt", "r")
-    names_file = open(r"c:\Users\ppppa\OneDrive\Documents\VSCodes\Python\Python_GameHub\Words\Names.txt", "r")
-    animals_file = open(r"c:\Users\ppppa\OneDrive\Documents\VSCodes\Python\Python_GameHub\Words\Animals.txt", "r")
+    fruits_file = open("Words\Fruits.txt", "r")
+    names_file = open("Words\Names.txt", "r")
+    animals_file = open("Words\Animals.txt", "r")
     fruits_list = []
     names_list = []
     animals_list = []
