@@ -1,0 +1,3 @@
+import Hangman
+import GuessTheNumber
+import GuessTheWord
