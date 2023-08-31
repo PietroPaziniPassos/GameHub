@@ -4,7 +4,7 @@ def play():
     welcome()
     secret_number = load_secret_number()
     total_attempts = choose_game_difficulty()
-    attempt = 0
+    attempt = 1
 
     while(attempt <= total_attempts):
         print("Attempt {} of {}".format(attempt, total_attempts))
@@ -20,6 +20,7 @@ def play():
                 print("It's not it! Try a smaller number.")
             elif(guess < secret_number):
                 print("It's not it! Try a bigger number.")
+        attempt += 1
     if(attempt > total_attempts):
         print_looser_message(secret_number)
 
