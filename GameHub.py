@@ -22,3 +22,6 @@ def choose_game():
     elif(game_number == 3):
         print("Loading Guess the word")
         GuessTheWord.play()
+
+if(__name__ == "__main__"):
+    choose_game()
