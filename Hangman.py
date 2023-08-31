@@ -32,3 +32,5 @@ def load_secret_word():
     fruits_file.close()
     names_file.close()
     animals_file.close()
+    randomNumber = random.randrange(0, len(all_words_list))
+    secret_word = all_words_list[randomNumber].upper()
