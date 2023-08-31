@@ -79,3 +79,6 @@ def print_looser_message(secret_number):
     print("     \_         _/         ")
     print("       \_______/           ")
     print("The number was ", secret_number)
+
+if(__name__ == "__main__"):
+    play()
