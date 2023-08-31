@@ -9,7 +9,7 @@ def play():
     print(right_letters)
 
     while(wrong_guesses <= 7 and "_" in right_letters):
-        guess = input("Guess a letter").strip().upper()
+        guess = input("Guess a letter: ").strip().upper()
         if(guess.isalpha()):
             if (guess in secret_word):
                 right_guess(guess, right_letters, secret_word)
@@ -32,9 +32,9 @@ def welcome():
     print()
 
 def load_secret_word():
-    fruits_file = open("Words\Fruits.txt", "r")
-    names_file = open("Words\Names.txt", "r")
-    animals_file = open("Words\Animals.txt", "r")
+    fruits_file = open("Words/Fruits.txt", "r")
+    names_file = open("Words/Names.txt", "r")
+    animals_file = open("Words/Animals.txt", "r")
     fruits_list = []
     names_list = []
     animals_list = []

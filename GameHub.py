@@ -17,14 +17,17 @@ def choose_game():
 
         if(game_number == 1):
             print("Loading Hangman...")
+            print()
             Hangman.play()
             break
         elif(game_number == 2):
             print("Loading Guess the number...")
+            print()
             GuessTheNumber.play()
             break
         elif(game_number == 3):
-            print("Loading Guess the word")
+            print("Loading Guess the word...")
+            print()
             GuessTheWord.play()
             break
         else:
