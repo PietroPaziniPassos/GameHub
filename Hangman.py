@@ -18,7 +18,7 @@ def play():
             draw_hangman(wrong_guesses, wrong_letters)
         print(right_letters)
     if ("_" not in right_letters):
-        print_win_message(secret_word)
+        print_winner_message(secret_word)
     else:
         print_looser_message(secret_word)
 
@@ -29,9 +29,9 @@ def welcome():
     print()
 
 def load_secret_word():
-    fruits_file = open("Words/Fruits.txt", "r")
-    names_file = open("Words/Names.txt", "r")
-    animals_file = open("Words/Animals.txt", "r")
+    fruits_file = open(r"c:\Users\ppppa\OneDrive\Documents\VSCodes\Python\Python_GameHub\Words\Fruits.txt", "r")
+    names_file = open(r"c:\Users\ppppa\OneDrive\Documents\VSCodes\Python\Python_GameHub\Words\Names.txt", "r")
+    animals_file = open(r"c:\Users\ppppa\OneDrive\Documents\VSCodes\Python\Python_GameHub\Words\Animals.txt", "r")
     fruits_list = []
     names_list = []
     animals_list = []
@@ -54,11 +54,11 @@ def load_secret_word():
     randomNumber = random.randrange(0, len(all_words_list))
     secret_word = all_words_list[randomNumber].upper()
     if (randomNumber in range(0, len(fruits_list))):
-        print("É uma fruta!")
+        print("It's a fruit name!")
     elif (randomNumber in range(len(fruits_list), len(fruits_list) + len(names_list)+1)):
-        print("É o nome de uma pessoa!")
+        print("It's a personal name!")
     elif (randomNumber in range(len(fruits_list) + len(names_list), len(fruits_list) + len(names_list) + len(animals_list)+2)):
-        print("É um animal!")
+        print("It's an animal name!")
     return secret_word
 
 def right_guess(guess, right_letters, secret_word):
