@@ -3,9 +3,43 @@ import random
 def play():
     welcome()
     secret_word = load_secret_word()
-    right_letters = ["_" for letter in secret_word]
-    for i in range(0, 5):
-        print(right_letters)
+    print(secret_word)
+    defaut_list = ["_" for letter in secret_word]
+    attempts = 5
+    for i in range(0, attempts):
+        print(defaut_list)
+    print()
+    attempts -= 1
+    guesses_list = []
+    while(attempts >= 0):
+        guess = input("Guess the word: ").upper()
+        print()
+        if(verify_correct(guess, secret_word)):
+            word_list = []
+            for letter in guess:
+                word_list.append(letter)
+            guesses_list.append(word_list)
+            for word in guesses_list:
+                print(word)
+            for i in range(0, attempts):
+                print(defaut_list)
+            print_winner_message(secret_word)
+            break
+        attempts -= 1
+        word_list = []
+        for letter in guess:
+            word_list.append(letter)
+        guesses_list.append(word_list)
+        for word in guesses_list:
+            print(word)
+        if(attempts >= 0):
+            print(verify_next(guess, secret_word))
+        for i in range(0, attempts):
+            print(defaut_list)
+        if(attempts >= 0):
+            print("You got correct the follow letters: ")
+            print(verify_letters(guess, secret_word))
+        print()
     
 def welcome():
     print("*******************************")
@@ -23,3 +57,39 @@ def load_secret_word():
     randomNumber = random.randrange(0, len(words_list))
     secret_word = words_list[randomNumber].upper()
     return secret_word
+
+def verify_next(guess, secret_word):
+    index = 0
+    new_list = ["_","_","_","_","_"]
+    while(index < 5):
+        if (guess[index] == secret_word[index]):
+            new_list[index] = guess[index]
+        else:
+            new_list[index] = "_"
+        index += 1
+    return new_list
+
+def verify_letters(guess, secret_word):
+    right_letters = []
+    for letter in guess:
+        for letters in secret_word:
+            if(letter == letters and letter not in right_letters):
+                right_letters.append(letter)
+    return right_letters
+
+def verify_correct(guess, secret_word):
+    index = 0
+    while(index < 5):
+        if (guess[index] == secret_word[index]):
+            index += 1
+        else:
+            return False
+            break
+    if(index == 5):
+        return True        
+
+def print_winner_message(secret_word):
+    pass
+
+if(__name__ == "__main__"):
+    play()
