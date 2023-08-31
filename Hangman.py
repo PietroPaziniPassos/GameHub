@@ -70,7 +70,56 @@ def right_guess(guess, right_letters, secret_word):
         index += 1
 
 def draw_hangman(wrong_guesses, wrong_letters):
-    pass
+    print("  _______     ")
+    print(" |/      |    ")
+
+    if(wrong_guesses == 1):
+        print (" |      (_)   ")
+        print (" |            ")
+        print (" |            ")
+        print (" |            ")
+
+    if(wrong_guesses == 2):
+        print (" |      (_)   ")
+        print (" |      \     ")
+        print (" |            ")
+        print (" |            ")
+
+    if(wrong_guesses == 3):
+        print (" |      (_)   ")
+        print (" |      \|    ")
+        print (" |            ")
+        print (" |            ")
+
+    if(wrong_guesses == 4):
+        print (" |      (_)   ")
+        print (" |      \|/   ")
+        print (" |            ")
+        print (" |            ")
+
+    if(wrong_guesses == 5):
+        print (" |      (_)   ")
+        print (" |      \|/   ")
+        print (" |       |    ")
+        print (" |            ")
+
+    if(wrong_guesses == 6):
+        print (" |      (_)   ")
+        print (" |      \|/   ")
+        print (" |       |    ")
+        print (" |      /     ")
+
+    if (wrong_guesses == 7):
+        print (" |      (_)   ")
+        print (" |      \|/   ")
+        print (" |       |    ")
+        print (" |      / \   ")
+
+    print(" |            ")
+    print("_|___         ")
+    print()
+    print("Wrong letters: ", wrong_letters)
+    print()
 
 def print_win_message(secret_word):
     pass
