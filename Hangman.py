@@ -22,7 +22,6 @@ def play():
     else:
         print_looser_message(secret_word)
 
-
 def welcome():
     print("******************************")
     print("***Welcome to hangman game!***")
@@ -154,3 +153,6 @@ def print_looser_message(secret_word):
     print("   \_             _/       ")
     print("     \_         _/         ")
     print("       \_______/           ")
+
+if(__name__ == "__main__"):
+    play()
