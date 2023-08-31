@@ -47,7 +47,18 @@ def choose_game_difficulty():
     return total_guesses
 
 def print_winner_message(secret_number):
-    pass
+    print("Congratulation, you won!  ")
+    print("       ___________      ")
+    print("      '._==_==_=_.'     ")
+    print("      .-\\:      /-.    ")
+    print("     | (|:.     |) |    ")
+    print("      '-|:.     |-'     ")
+    print("        \\::.    /      ")
+    print("         '::. .'        ")
+    print("           ) (          ")
+    print("         _.' '._        ")
+    print("        '-------'       ")
+    print("The number was ", secret_number)
 
 def print_looser_message(secret_number):
     pass
