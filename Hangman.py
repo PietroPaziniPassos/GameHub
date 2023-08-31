@@ -34,3 +34,10 @@ def load_secret_word():
     animals_file.close()
     randomNumber = random.randrange(0, len(all_words_list))
     secret_word = all_words_list[randomNumber].upper()
+    if (randomNumber in range(0, len(fruits_list))):
+        print("É uma fruta!")
+    elif (randomNumber in range(len(fruits_list), len(fruits_list) + len(names_list)+1)):
+        print("É o nome de uma pessoa!")
+    elif (randomNumber in range(len(fruits_list) + len(names_list), len(fruits_list) + len(names_list) + len(animals_list)+2)):
+        print("É um animal!")
+    return secret_word
