@@ -63,7 +63,11 @@ def load_secret_word():
     return secret_word
 
 def right_guess(guess, right_letters, secret_word):
-    pass
+    index = 0
+    for letter in secret_word:
+        if (guess == letter):
+            right_letters[index] = letter
+        index += 1
 
 def draw_hangman(wrong_guesses, wrong_letters):
     pass
