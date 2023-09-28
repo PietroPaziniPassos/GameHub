@@ -3,7 +3,7 @@ import random
 def play():
     welcome()
     secret_word = load_secret_word()
-    print(secret_word)
+    ##print(secret_word)
     defaut_list = ["_" for letter in secret_word]
     attempts = 5
     for i in range(0, attempts):
